@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     public float lifeTime = 2f;
     public int damage = 10;
+    public GameObject hitEffectPrefab;
 
     void Start()
     {
@@ -12,6 +13,12 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        if (hitEffectPrefab != null)
+        {
+            ContactPoint contact = other.contacts[0];
+            Instantiate(hitEffectPrefab, contact.point, Quaternion.LookRotation(contact.normal));
+        }
+
         if (other.gameObject.CompareTag("Enemy"))
         {
             

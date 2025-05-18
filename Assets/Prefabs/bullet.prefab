@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 2
+  damage: 10
+  hitEffectPrefab: {fileID: 5453216587820140518, guid: b07612888fba21a47a1bce9e60cff72f, type: 3}
 --- !u!54 &-5618684242816351811
 Rigidbody:
   m_ObjectHideFlags: 0
